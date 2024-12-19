@@ -1,0 +1,18 @@
+save_file: tests/outputs/generation/t2gbc/gbc_prompt_gen.json
+
+prompt_gen_config:
+  allow_composition: true
+  star_graph: false
+  verbose: true
+  seed: 1015
+  temperature: 1
+  top_p: 0.95
+  top_k: 60
+  repetition_penalty: 1
+  max_new_tokens: 4096
+  torch_dtype: torch.float32
+  device: cpu
+  attn_implementation: sdpa
+
+model_config:
+  prompt_gen_model_name_or_path: graph-based-captions/GBC10M-PromptGen-200M

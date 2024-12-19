@@ -1,0 +1,2 @@
+Please describe the composition of the {} in the bounding boxes, followed by some general descriptions that apply to all {}. The composition should include {} and be based on the following hints (do not mention hints or bounding boxes in the response).
+{}

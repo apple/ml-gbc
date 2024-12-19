@@ -1,0 +1,99 @@
+save_dir: ./tests/outputs/generation/gbc2i/sdxl-ipa-region-base/
+
+image_sampling_func:
+
+  _target_: gbc.t2i.gbc_diffusion_sampling
+  _partial_: true
+  
+  return_flattened: true
+  return_with_bbox: true
+  use_region_attention: true
+  use_layer_attention: false
+  exclusive_region_attention: false
+  labels_in_neg: false
+  concat_ancestor_prompts: false
+
+  internal_sampling_func:
+    _target_: gbc.t2i.sample_euler_ancestral
+    _partial_: true
+    eta: 0.0
+
+  num_samples: 8
+  padding_mode: cycling
+  cfg_scale: 6
+  seed: 1315
+  num_steps: 24
+  width: 1024
+  height: 1024
+
+  train_scheduler:
+    _target_: diffusers.EulerDiscreteScheduler.from_pretrained
+    pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
+    subfolder: scheduler
+
+model_config:
+
+  unet:
+    _target_: gbc.t2i.modules.unet_patch.GbcUNet2DConditionModel.from_pretrained
+    _load_config_:
+      device: cuda
+      precision: torch.float16
+      to_freeze: true
+    load_ip_adapter_kwargs:
+      pretrained_model_name_or_path: h94/IP-Adapter
+      subfolder: sdxl_models
+      weight_name: ip-adapter_sdxl.bin
+    ip_adapter_scale: 1.0
+    pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
+    subfolder: unet
+    use_region_attention: true
+    use_caption_mask: false
+    use_layer_attention: false
+    use_flex_attention_for_region: false
+
+  te:
+    _target_: gbc.t2i.modules.text_encoders.ConcatTextEncoders
+    _load_config_:
+      device: cuda
+      precision: torch.float16
+      to_freeze: true
+    tokenizers:
+    - openai/clip-vit-large-patch14
+    - laion/CLIP-ViT-bigG-14-laion2B-39B-b160k
+    text_model_and_configs:
+    - 
+      - _target_: transformers.CLIPTextModel.from_pretrained
+        pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
+        subfolder: text_encoder
+      - disable_autocast: false
+        concat_bucket: 0
+        use_pooled: false
+        need_mask: false
+        layer_idx: -2
+    - 
+      - _target_: transformers.CLIPTextModel.from_pretrained
+        pretrained_model_name_or_path: stabilityai/stable-diffusion-xl-base-1.0
+        subfolder: text_encoder_2
+      - disable_autocast: false
+        concat_bucket: 0
+        use_pooled: true
+        need_mask: false
+        layer_idx: -2
+    zero_for_padding: false
+
+  vae:
+    _target_: diffusers.AutoencoderKL.from_pretrained
+    _load_config_:
+      device: cuda
+      precision: torch.float16
+      to_freeze: true
+    pretrained_model_name_or_path: madebyollin/sdxl-vae-fp16-fix
+
+  image_encoder:
+    _target_: transformers.CLIPVisionModelWithProjection.from_pretrained
+    _load_config_:
+      device: cuda
+      precision: torch.float16
+      to_freeze: true
+    pretrained_model_name_or_path: h94/IP-Adapter
+    subfolder: sdxl_models/image_encoder

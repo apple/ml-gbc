@@ -1,0 +1,7 @@
+fastapi
+httpx
+async_lru
+h2
+duckdb
+uvicorn
+Pillow

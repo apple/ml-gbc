@@ -1,0 +1,1 @@
+Following the instruction, please provide a detailed caption and a concise formatted caption for the given image. Note that it is crucial for you to put elements that can be detected and should be further described in picture in brackets as [object_name][node_type] in the concise formatted caption.

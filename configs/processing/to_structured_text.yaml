@@ -1,0 +1,18 @@
+processing_config:
+  input_paths: [data/gbc/wiki/]
+  input_formats: [.jsonl]
+  data_transform:
+    _target_: gbc.processing.data_transforms.create_list_transform
+    transform_function:
+      _target_: gbc.processing.data_transforms.gbc_graph_to_text_and_image
+      _partial_: true
+      text_format: structured
+      graph_traversal_mode: topological
+      caption_agg_mode_for_structured: fisrt 
+      read_image: false  # Object of type Image can not be stored in json etc.
+  name_transform:
+    _target_: gbc.processing.data_transforms.append_string_to_filename
+    _partial_: true
+    append_text: _structured_text
+  save_format: .json
+  save_dir: tests/outputs/processing/filtering/

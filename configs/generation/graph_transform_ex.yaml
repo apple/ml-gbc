@@ -1,0 +1,9 @@
+graph_transform:
+  _target_: gbc.processing.data_transforms.basic_filter_and_extract
+  _partial_: true
+  drop_vertex_size_kwargs:
+    min_rel_width: 0.1
+    min_rel_height: 0.1
+  same_level_max_bbox_overlap_ratio: 0.25
+  max_n_vertices: 10
+  keep_in_edges: false

@@ -1,0 +1,26 @@
+processing_config:
+  input_paths: [data/gbc/wiki/]
+  input_formats: [.jsonl]
+
+  data_transform:
+    _target_: gbc.processing.data_transforms.compute_clip_scores
+    _partial_: true
+    clip_models:
+      openai-l-patch14-336:
+        _target_: gbc.processing.data_transforms.clip_scoring.HfClipScoreModel
+        device: "cuda:0"
+        clip_model_path: openai/clip-vit-large-patch14-336
+      dfn5b-h-patch14-378:
+        _target_: gbc.processing.data_transforms.clip_scoring.OpenClipScoreModel
+        device: "cuda:0"
+        clip_model_path: hf-hub:apple/DFN5B-CLIP-ViT-H-14-384
+        tokenizer_name: ViT-H-14
+    batch_size: 256
+
+  name_transform:
+    _target_: gbc.processing.data_transforms.append_string_to_filename
+    _partial_: true
+    append_text: _with_clip
+
+  save_format: .jsonl
+  save_dir: tests/outputs/processing/clip_scoring/

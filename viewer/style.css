@@ -1,0 +1,102 @@
+html, body, .container-fluid, .row {
+  height: 100%;
+}
+#sidebar {
+  width: 15%;
+}
+#mynetwork {
+  width: 100%;
+  height: 100%;
+}
+#imageviewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Adjust this value as needed */
+  background-color: gray;
+}
+#imgwrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+#imgwrapper img {
+  max-width: 100%;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+}
+.bbox {
+  position: absolute;
+  border: .2rem solid;
+  pointer-events: none;
+}
+#caption {
+  height: 0;
+  overflow-y: auto;
+}
+#captionViewer {
+  height: 100%;
+}
+
+.outer-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.inner-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.object {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.vis-tooltip{
+  visibility: hidden !important;
+}
+.nav li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; /* Adjust this value as needed */
+  color: black;
+}
+
+:root{
+  --global-color: rgba(233,43,124,1);
+  --image-color: rgba(233,43,124,1);
+  --composition-color: green;
+  --entity-color: blue;
+  --relation-color: orange;
+}
+.node {
+  text-decoration: none;
+}
+.node:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.node-image {
+  color: rgba(233,43,124,1);
+}
+.node-global {
+  color: rgba(233,43,124,1);
+}
+.node-composition {
+  color: green;
+}
+.node-relation {
+  color: orange;
+}
+.node-entity {
+  color: blue;
+}
