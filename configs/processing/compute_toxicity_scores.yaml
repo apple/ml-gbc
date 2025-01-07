@@ -1,0 +1,17 @@
+processing_config:
+  input_paths: [data/gbc/wiki/]
+  input_formats: [.jsonl]
+
+  data_transform:
+    _target_: gbc.processing.data_transforms.compute_toxicity_scores
+    _partial_: true
+    model_name: original
+    device: cuda
+
+  name_transform:
+    _target_: gbc.processing.data_transforms.append_string_to_filename
+    _partial_: true
+    append_text: _with_toxicity
+
+  save_format: .json
+  save_dir: tests/outputs/processing/toxicity_scoring/

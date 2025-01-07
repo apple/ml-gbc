@@ -1,0 +1,23 @@
+processing_config:
+  input_paths: [data/gbc/wiki/]
+  input_formats: [.jsonl]
+  data_transform:
+    _target_: gbc.processing.data_transforms.create_list_transform
+    transform_function:
+      _target_: gbc.processing.data_transforms.basic_filter_and_extract
+      _partial_: true
+      drop_vertex_size_kwargs:
+        min_rel_width: 0.1
+        min_rel_height: 0.1
+      drop_vertex_types:
+      - relation
+      drop_caption_types:
+      - hardcode
+      - composition
+      max_n_vertices: 10
+  name_transform:
+    _target_: gbc.processing.data_transforms.append_string_to_filename
+    _partial_: true
+    append_text: _relation_filtered_max_10_vertices
+  save_format: .parquet
+  save_dir: tests/outputs/processing/filtering/

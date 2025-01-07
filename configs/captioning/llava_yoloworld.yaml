@@ -1,0 +1,90 @@
+pipeline_config:
+
+  artifact_format: .jsonl
+  save_frequency: 100
+  save_dir: tests/outputs/captioning/gbc_wiki_images
+  save_callback: null
+  save_images: False
+
+  batch_query: False
+  batch_size: 32  # ignored if batch_query is False
+  
+  include_entity_query: True
+  include_composition_query: True
+  include_relation_query: True
+
+  mask_inside_threshold: 0.85
+
+shared:
+
+  suitable_for_detection_func:
+    _target_: gbc.texts.text_helpers.suitable_for_detection 
+    _partial_: true
+
+  potential_same_object_func:
+    _target_: gbc.texts.text_helpers.potential_same_object
+    _partial_: true
+
+  detection_model:
+    _target_: gbc.captioning.detection.yolo_world.YoloWorldDetection
+    work_dir: logs
+    model_version: x_v2
+
+  llava_7B:
+    gpu_id: 0
+    version: Mistral-7B
+
+  llava_34B:
+    gpu_id: 0
+    version: Yi-34B
+
+queries:
+
+  image_query:
+    _target_: gbc.captioning.mllm.llava.LlavaImageQuery
+    model_kwargs: ${...shared.llava_34B}
+    system_file: prompts/captioning/system_image.txt
+    query_file: prompts/captioning/query_image.txt
+    suitable_for_detection_func: ${...shared.suitable_for_detection_func}
+  
+  entity_query:
+    _target_: gbc.captioning.mllm.llava.LlavaEntityQuery
+    model_kwargs: ${...shared.llava_7B}
+    system_file: prompts/captioning/system_entity.txt
+    query_file: prompts/captioning/query_entity.txt
+    suitable_for_detection_func: ${...shared.suitable_for_detection_func}
+    potential_same_object_func: ${...shared.potential_same_object_func}
+
+  relation_query:
+    _target_: gbc.captioning.mllm.llava.LlavaRelationQuery
+    model_kwargs: ${...shared.llava_7B}
+    system_file: prompts/captioning/system_relation.txt
+    query_file: prompts/captioning/query_relation.txt
+
+  composition_query:
+    _target_: gbc.captioning.mllm.llava.LlavaCompositionQuery
+    model_kwargs: ${...shared.llava_34B}
+    system_file: prompts/captioning/system_composition.txt
+    query_file: prompts/captioning/query_composition.txt
+
+  detection_from_image:
+    _target_: gbc.captioning.detection.detection_action.DetectionAction
+    detection_model: ${...shared.detection_model}
+    score_threshold: 0.35  # 0.05
+    nms_single_threshold: 0.05
+    nms_multiple_threshold: 0.2
+    select_high_conf_tolerance: 0.05
+    topk: 6
+    min_abs_area: 5000
+    max_rel_area: null
+  
+  detection_from_entity:
+    _target_: gbc.captioning.detection.detection_action.DetectionAction
+    detection_model: ${...shared.detection_model}
+    score_threshold: 0.35  # 0.05
+    nms_single_threshold: 0.05
+    nms_multiple_threshold: 0.2
+    select_high_conf_tolerance: 0.05
+    topk: 6
+    min_abs_area: 5000
+    max_rel_area: 0.8

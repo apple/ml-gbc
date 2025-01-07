@@ -1,0 +1,17 @@
+- prompts:
+  - A person wearing a t-shirt and shorts on street looking at viewer.
+  - The t-shirt is white with a small logo on the chest.
+  - The shorts are navy-blue, knee-length with side pockets and a subtle checkered pattern.
+  bboxes:
+  # Ensure that only first prompt is used in first phase
+  - [0, 0, 1, 1]
+  - [0, 0, 0, 0]
+  - [0, 0, 0, 0]
+  adjacency:
+  - [1, 2]
+  - []
+  - []
+  labeled_adjacency:
+  - [[1, ["t-shirt"]], [2, ["shorts"]]]
+  - []
+  - []

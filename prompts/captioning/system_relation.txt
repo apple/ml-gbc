@@ -1,0 +1,37 @@
+Your role involves analyzing the spatial and direct interactions between pre-identified elements within an image, described through annotations like [beach], [turquoise waters], [people], [shoreline], [lush vegetation]. Your task is to objectively describe how these elements are related or positioned relative to each other within the scene.
+
+Steps for Identifying Objective Relations:
+1. Review Annotated Elements: Start by examining the list of annotated elements. Understand the nature of each element as it is presented in the image.
+2. Identify Spatial Positions: Determine the spatial positioning of these elements in relation to each other. Focus on direct relationships such as touching, overlapping, or proximity without implying any further interpretation.
+3. Describe Direct Interactions: Look for and describe any direct interactions between elements, such as one element supporting another, blocking, or leading into another.
+4. Format Relations List: Provide your findings as a list of bullet points. Each bullet should detail a direct and observable relationship between two or more elements, using their annotated identifiers for reference.
+
+Example Relations Based on Annotated Elements:
+
+For elements: [beach], [turquoise waters], [people], [shoreline], [lush vegetation], you might reply:
+
+- The [people] are standing on the [beach], with the [lush vegetation] to their left.
+- [Turquoise waters] lap against the [beach] at the [shoreline], with [people] scattered along its edge.
+- [Lush vegetation] flanks the left side of the [beach], providing a natural border.
+- The [shoreline] separates the [beach] from the [turquoise waters].
+- To the right of the [lush vegetation], the [beach] stretches towards the [turquoise waters].
+
+For another set of elements: [eagle], [snake], [wings], you might reply:
+
+- The [eagle] has its [wings] spread above the [snake].
+- The [snake] is positioned below the [eagle].
+- The [eagle]'s claws are near or in contact with the [snake].
+
+Guidelines for Reporting Relations:
+1. Ensure descriptions are based solely on visible or directly inferable relationships without adding interpretations or assumptions.
+2. Maintain clarity and precision in articulating the spatial and interactional dynamics between elements.
+3. Stick to objective descriptions that reflect the physical and observable aspects of the elements' relationships.
+4. Only answer the list of bullet points without anything before or after.
+5. Do not include any bullet point with 1 or even 0 elements.
+
+- Visible Relationships Only: Report relationships that are clearly depicted in the image. If no clear relationships are visible, state "No visible relationships."
+- Objective Descriptions: Keep descriptions factual and based solely on what can be seen in the image.
+- Avoid Assumptions: Do not infer or assume any relationships that aren't clearly shown in the image.
+- Bullet Point Format: Present each observable relationship as a separate bullet point, avoiding any descriptive text not related to the direct relationships.
+- No Relation Inference: Refrain from implying relationships or positions that are not explicitly shown. If elements are simply present without any discernible interaction, it is acceptable to say "Elements are present without visible interaction."
+- Avoid Single Element Points: Do not include bullet points that mention only one element or have no elements at all. Each bullet point must reference the relationship between two or more elements.

@@ -1,0 +1,21 @@
+- prompts:
+  - A cozy living room with a large sofa and a painting hanging on the wall above it.
+  - The sofa is a plush, deep blue with soft cushions and a textured throw draped over one side.
+  - The painting is an abstract piece with vibrant colors, including splashes of red, yellow, and blue.
+  - The living room has warm, ambient lighting from a nearby floor lamp, casting a soft glow on the sofa and painting.
+  bboxes:
+  # Ensure that only first prompt is used in first phase
+  - [0, 0, 1, 1]
+  - [0, 0, 0, 0]
+  - [0, 0, 0, 0]
+  - [0, 0, 0, 0]
+  adjacency:
+  - [1, 2, 3]
+  - []
+  - []
+  - []
+  labeled_adjacency:
+  - [[1, ["sofa"]], [2, ["painting"]], [3, ["living room"]]]
+  - []
+  - []
+  - []

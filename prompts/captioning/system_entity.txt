@@ -1,0 +1,59 @@
+Your task is to perform an in-depth analysis of a cropped image focusing on a requested object, like a "house". The process involves a step-by-step evaluation to identify the object's presence, describe its features, craft concise captions, and assess any prominent objects.
+
+Process Overview:
+
+Verify Object Presence:
+- Examine the image to determine if the specified object, or any instance of it, is present.
+- State the presence with "Object Present: Yes" or "Object Present: No".
+
+Provide Appropriate Caption (If Object Is Present):
+- Provide a detailed description of the object, focusing solely on its features without reference to other elements in the image.
+- The description should contain at most 50 words.
+
+Assessment of Prominent Objects:
+- Evaluate the described features to determine if any stand out for further description and are detectable by an object detection model. This is crucial for complex objects such as 'man', 'woman', 'family', 'couple', 'cat', or 'house', where components or distinctive attributes are significant. For example, when analyzing 'woman', consider elements like dress [single], skirt [single], or hair [single] as prominent features. For simpler objects like 'cup' or 'chair', additional descriptions may not be needed.
+
+Identification of Prominent Features (If Applicable):
+- If there are prominent features identified, list and format these features for potential detection by an object detection model.
+- Ensure these features are parts or components of the main object and not the entire object itself.
+- Use [single] for unique, standalone items, and [multiple] for features present more than once, such as roof [single] or windows [multiple].
+- Group similar items under a single [multiple] label rather than describing them separately, even if individual descriptions were provided in the detailed caption. For example, multiple distinct windows in a house should be labeled as windows [multiple] rather than individually enumerated.
+- For groups like families or couples, identify members separately (e.g., man [single], woman [single]) rather than as a collective unit. This contrasts with grouping similar inanimate objects (e.g., windows [multiple]), where individual distinction isn't necessary.
+- Consistency with the caption: Ensure that the features identified as [single] or [multiple] are also mentioned in the caption.
+
+Example Responses:
+
+Example 1: Object Not Present
+
+Object Presence: No
+Detailed Caption: N/A
+Prominent Features: N/A
+Identification of Prominent Features: N/A
+
+Example 2: Object Present Without Prominent Features (requested object: "cup")
+
+Object Presence: Yes
+Detailed Caption: A simple ceramic cup on a wooden table. The cup has a smooth, unadorned surface and a standard curved handle on one side.
+Prominent Features: No
+Identification of Prominent Features: N/A
+
+Example 3: Object Present With Prominent Features (requested object: "family")
+
+Object Presence: Yes
+Detailed Caption: A family of four is captured enjoying a sunny day in the park. The father, in casual attire, is engrossed in setting up a picnic spot, while the mother, donned in a summer dress, is laying out a feast on a blanket. Nearby, two children, a boy and a girl, engage in playful antics; the boy is kicking a football with fervor, and the girl, adorned in a light frock, is gleefully chasing bubbles.
+Prominent Features: Yes
+Identification of Prominent Features:
+- Father: [single]
+- Mother: [single]
+- Boy: [single]
+- Girl: [single]
+
+Example 4: Object Present With Prominent Features (requested object: "car")
+
+Object Presence: Yes
+Detailed Caption: A vintage car in pristine condition, with shiny chrome bumpers and classic spoke wheels. The car's body is painted in a vibrant red, and the leather interior is visible through the clear windows. A unique hood ornament adorns the front, adding to the car's elegance.
+Prominent Features: Yes
+Identification of Prominent Features:
+- Chrome bumpers: [single]
+- Wheels: [multiple] 
+- Hood ornament: [single]

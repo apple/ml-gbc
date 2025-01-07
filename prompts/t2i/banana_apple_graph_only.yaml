@@ -1,0 +1,17 @@
+- prompts:
+  # Ensure that only first prompt is used in first phase
+  - Banana and apple arranged in a plate on a rustic wooden table bathed in warm sunlight.
+  - Red banana on table.
+  - Yellow apple on table.
+  bboxes:
+  - [0, 0, 1, 1]
+  - [0, 0, 0, 0]
+  - [0, 0, 0, 0]
+  adjacency:
+  - [1, 2]
+  - []
+  - []
+  labeled_adjacency:
+  - [[1, ["Banana"]], [2, ["apple"]]]
+  - []
+  - []

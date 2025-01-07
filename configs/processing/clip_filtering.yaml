@@ -1,0 +1,23 @@
+processing_config:
+  input_paths: [data/gbc/wiki_with_clip_scores/]
+  input_formats: [.jsonl]
+  data_transform:
+    _target_: gbc.processing.data_transforms.gbc_clip_filter
+    _partial_: true
+    clip_names:
+      - dfn5b-h-patch14-378
+    min_clip_scores:
+      original: 0.24970313230613642
+      short-image: 0.23114516488176592
+      detail-image: 0.19171233770958623
+      relation: 0.18524515134437888
+      composition: 0.11810152712453109
+      short-composition: 0.1397709942144013
+      detail-entity: 0.15333012089283748
+  name_transform:
+    _target_: gbc.processing.data_transforms.string_replace
+    _partial_: true
+    old_str: _with_clip
+    new_str: _clip_filtered
+  save_format: .parquet
+  save_dir: tests/outputs/processing/clip_filtering/

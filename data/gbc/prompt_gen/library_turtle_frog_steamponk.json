@@ -1,0 +1,971 @@
+[
+    {
+        "vertices": [
+            {
+                "vertex_id": "image",
+                "bbox": {
+                    "left": 0.0,
+                    "top": 0.0,
+                    "right": 1.0,
+                    "bottom": 1.0,
+                    "confidence": null
+                },
+                "label": "image",
+                "descs": [
+                    {
+                        "text": "A cozy library room with a large wooden bookshelf, a leather armchair, and a small reading table with an old lamp.",
+                        "label": "short",
+                        "full_label": "short-image",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [],
+                "out_edges": [
+                    {
+                        "source": "image",
+                        "text": "lamp",
+                        "target": "lamp"
+                    },
+                    {
+                        "source": "image",
+                        "text": "bookshelf",
+                        "target": "bookshelf"
+                    },
+                    {
+                        "source": "image",
+                        "text": "leather armchair",
+                        "target": "leather armchair"
+                    }
+                ],
+                "sub_masks": [
+                    "bookshelf",
+                    "lamp",
+                    "leather armchair"
+                ],
+                "super_masks": []
+            },
+            {
+                "vertex_id": "lamp",
+                "bbox": {
+                    "left": 0.3435201,
+                    "top": 0.2755999,
+                    "right": 0.5167765,
+                    "bottom": 0.6768067,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A vintage table lamp with a gold base and a white lampshade. The lamp has a classic design with a curved neck and a floral pattern at the base.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "lamp",
+                        "target": "lamp"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image"
+                ]
+            },
+            {
+                "vertex_id": "bookshelf",
+                "bbox": {
+                    "left": 0.0,
+                    "top": 0.0083647,
+                    "right": 0.3799476,
+                    "bottom": 0.8133793,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "The image showcases a bookshelf filled with a variety of books. The bookshelf has multiple shelves, each holding an assortment of books. The books come in different sizes and colors, suggesting a diverse collection. The bookshelf appears to be well-stocked, indicating a personal or public library.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "bookshelf",
+                        "target": "bookshelf"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image"
+                ]
+            },
+            {
+                "vertex_id": "leather armchair",
+                "bbox": {
+                    "left": 0.4556839,
+                    "top": 0.54578,
+                    "right": 0.9999467,
+                    "bottom": 0.9970161,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A vintage leather armchair with a rich brown color. The chair has a plush seat cushion and armrests. It features a tufted backrest with decorative buttons, adding to its classic design.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "leather armchair",
+                        "target": "leather armchair"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image"
+                ]
+            }
+        ],
+        "img_url": null,
+        "img_path": "data/images/t2gbc2i/library.png",
+        "original_caption": null,
+        "short_caption": "A cozy library room with a large wooden bookshelf, a leather armchair, and a small reading table with an old lamp.",
+        "detail_caption": null,
+        "img_size": null,
+        "mask_inside_threshold": 0.85
+    },
+    {
+        "vertices": [
+            {
+                "vertex_id": "image",
+                "bbox": {
+                    "left": 0.0,
+                    "top": 0.0,
+                    "right": 1.0,
+                    "bottom": 1.0,
+                    "confidence": null
+                },
+                "label": "image",
+                "descs": [
+                    {
+                        "text": "A turtle sunbathing on a log in a quiet pond, with lily pads floating on the water.",
+                        "label": "short",
+                        "full_label": "short-image",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [],
+                "out_edges": [
+                    {
+                        "source": "image",
+                        "text": "turtle",
+                        "target": "turtle"
+                    },
+                    {
+                        "source": "image",
+                        "text": "lily pads",
+                        "target": "lily pads"
+                    },
+                    {
+                        "source": "image",
+                        "text": "pond",
+                        "target": "pond"
+                    }
+                ],
+                "sub_masks": [
+                    "lily pads",
+                    "lily pads_0",
+                    "lily pads_1",
+                    "lily pads_3",
+                    "lily pads_4",
+                    "lily pads_5",
+                    "pond",
+                    "turtle"
+                ],
+                "super_masks": [
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "turtle",
+                "bbox": {
+                    "left": 0.3394738,
+                    "top": 0.3514743,
+                    "right": 0.9887044,
+                    "bottom": 0.8985516,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A large turtle with a rough, textured shell is seen resting on a log. Its head is slightly raised, and it appears calm and relaxed.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "turtle",
+                        "target": "turtle"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "lily pads",
+                "bbox": {
+                    "left": 0.0032878,
+                    "top": 0.2119156,
+                    "right": 0.9938628,
+                    "bottom": 0.8818132,
+                    "confidence": null
+                },
+                "label": "composition",
+                "descs": [
+                    {
+                        "text": "The varying sizes and positions of the lily pads create a sense of depth in the composition, with lily pad 3 appearing closer due to its position in the top left corner, while lily pad 4 seems further away due to its position at the bottom right corner.",
+                        "label": "short",
+                        "full_label": "short-composition",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "lily pads",
+                        "target": "lily pads"
+                    }
+                ],
+                "out_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 5",
+                        "target": "lily pads_5"
+                    },
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 4",
+                        "target": "lily pads_4"
+                    },
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 1",
+                        "target": "lily pads_0"
+                    },
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 3",
+                        "target": "lily pads_3"
+                    },
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 2",
+                        "target": "lily pads_1"
+                    }
+                ],
+                "sub_masks": [
+                    "lily pads_0",
+                    "lily pads_1",
+                    "lily pads_3",
+                    "lily pads_4",
+                    "lily pads_5",
+                    "turtle"
+                ],
+                "super_masks": [
+                    "image",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "pond",
+                "bbox": {
+                    "left": 0.004549,
+                    "top": 0.0331481,
+                    "right": 0.995275,
+                    "bottom": 0.9658425,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A small pond with clear water, surrounded by rocks and lily pads. A single fish can be seen swimming near the edge.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "pond",
+                        "target": "pond"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [
+                    "image",
+                    "lily pads",
+                    "lily pads_0",
+                    "lily pads_1",
+                    "lily pads_3",
+                    "lily pads_4",
+                    "lily pads_5",
+                    "turtle"
+                ],
+                "super_masks": [
+                    "image"
+                ]
+            },
+            {
+                "vertex_id": "lily pads_5",
+                "bbox": {
+                    "left": 0.0050684,
+                    "top": 0.2789168,
+                    "right": 0.2461624,
+                    "bottom": 0.4493448,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A vibrant green lily pad floating on a serene body of water. The lily pad has a smooth surface with small bumps scattered across it. Its edges are slightly wavy, giving it a natural, organic appearance.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 5",
+                        "target": "lily pads_5"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "lily pads_4",
+                "bbox": {
+                    "left": 0.6314693,
+                    "top": 0.2487942,
+                    "right": 0.9304661,
+                    "bottom": 0.3928139,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A close-up view of a lily pad floating on water. The lily pad has a smooth, rounded surface with a distinct pattern of veins running across it. Its edges are slightly wavy, and it appears fresh and vibrant.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 4",
+                        "target": "lily pads_4"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "lily pads_0",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "lily pads_0",
+                "bbox": {
+                    "left": 0.6315928,
+                    "top": 0.2488286,
+                    "right": 0.9938628,
+                    "bottom": 0.3921498,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A close-up view of a lily pad floating on a body of water. The lily pad has a smooth surface with a distinct pattern of veins. It appears to be a young plant with a greenish hue.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 1",
+                        "target": "lily pads_0"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [
+                    "lily pads_4"
+                ],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "lily pads_3",
+                "bbox": {
+                    "left": 0.0032878,
+                    "top": 0.746121,
+                    "right": 0.3416202,
+                    "bottom": 0.8818132,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A close-up view of a lily pad floating on water. The lily pad has a smooth, rounded surface with a slightly lighter green color near the edges. It appears to be in good condition with no visible damage or holes.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 3",
+                        "target": "lily pads_3"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "pond"
+                ]
+            },
+            {
+                "vertex_id": "lily pads_1",
+                "bbox": {
+                    "left": 0.1136896,
+                    "top": 0.2119156,
+                    "right": 0.4735582,
+                    "bottom": 0.327053,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A close-up view of a lily pad floating on water. The lily pad has a smooth, rounded surface with a distinct pattern of veins running across it. Its edges are slightly wavy, and it appears to be in good condition with no visible damage or holes.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "lily pads",
+                        "text": "lily pad 2",
+                        "target": "lily pads_1"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "lily pads",
+                    "pond"
+                ]
+            }
+        ],
+        "img_url": null,
+        "img_path": "data/images/t2gbc2i/turtle.png",
+        "original_caption": null,
+        "short_caption": "A turtle sunbathing on a log in a quiet pond, with lily pads floating on the water.",
+        "detail_caption": null,
+        "img_size": null,
+        "mask_inside_threshold": 0.85
+    },
+    {
+        "vertices": [
+            {
+                "vertex_id": "image",
+                "bbox": {
+                    "left": 0.0,
+                    "top": 0.0,
+                    "right": 1.0,
+                    "bottom": 1.0,
+                    "confidence": null
+                },
+                "label": "image",
+                "descs": [
+                    {
+                        "text": "A frog in a mystical forest filled with oversized mushrooms.",
+                        "label": "short",
+                        "full_label": "short-image",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [],
+                "out_edges": [
+                    {
+                        "source": "image",
+                        "text": "frog",
+                        "target": "frog"
+                    },
+                    {
+                        "source": "image",
+                        "text": "mushrooms",
+                        "target": "mushrooms"
+                    }
+                ],
+                "sub_masks": [
+                    "frog",
+                    "mushrooms",
+                    "mushrooms_0",
+                    "mushrooms_1",
+                    "mushrooms_2"
+                ],
+                "super_masks": []
+            },
+            {
+                "vertex_id": "frog",
+                "bbox": {
+                    "left": 0.2844666,
+                    "top": 0.2765431,
+                    "right": 0.5205867,
+                    "bottom": 0.4960949,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A frog with vibrant green skin sits perched on a mushroom. Its large eyes are wide open, and it appears to be looking directly at the camera.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "frog",
+                        "target": "frog"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "mushrooms"
+                ]
+            },
+            {
+                "vertex_id": "mushrooms",
+                "bbox": {
+                    "left": 1.65e-05,
+                    "top": 0.1259353,
+                    "right": 0.9140849,
+                    "bottom": 0.8128494,
+                    "confidence": null
+                },
+                "label": "composition",
+                "descs": [
+                    {
+                        "text": "The mushrooms appear fresh, with no visible signs of decay or damage, indicating they are in good condition for consumption or display.",
+                        "label": "short",
+                        "full_label": "short-composition",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "mushrooms",
+                        "target": "mushrooms"
+                    }
+                ],
+                "out_edges": [
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 2",
+                        "target": "mushrooms_1"
+                    },
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 3",
+                        "target": "mushrooms_2"
+                    },
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 1",
+                        "target": "mushrooms_0"
+                    }
+                ],
+                "sub_masks": [
+                    "frog",
+                    "mushrooms_0",
+                    "mushrooms_1",
+                    "mushrooms_2"
+                ],
+                "super_masks": [
+                    "image"
+                ]
+            },
+            {
+                "vertex_id": "mushrooms_1",
+                "bbox": {
+                    "left": 1.65e-05,
+                    "top": 0.1259353,
+                    "right": 0.3799304,
+                    "bottom": 0.4728796,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A large cluster of mushrooms with a vibrant greenish hue. Each mushroom has a distinct gill structure and a small stem attached to it.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 2",
+                        "target": "mushrooms_1"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "mushrooms"
+                ]
+            },
+            {
+                "vertex_id": "mushrooms_2",
+                "bbox": {
+                    "left": 0.3124881,
+                    "top": 0.3502391,
+                    "right": 0.7004011,
+                    "bottom": 0.8128494,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A close-up view of several mushrooms with a vibrant greenish hue. They have a smooth, glossy surface and are tightly packed together.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 3",
+                        "target": "mushrooms_2"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "mushrooms"
+                ]
+            },
+            {
+                "vertex_id": "mushrooms_0",
+                "bbox": {
+                    "left": 0.0004791,
+                    "top": 0.3090444,
+                    "right": 0.3762529,
+                    "bottom": 0.8080888,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A large cluster of mushrooms with a vibrant green hue. They are tightly packed together, creating a dense, textured appearance. The mushrooms have a smooth surface with small gills visible underneath.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "mushrooms",
+                        "text": "mushroom 1",
+                        "target": "mushrooms_0"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "mushrooms"
+                ]
+            }
+        ],
+        "img_url": null,
+        "img_path": "data/images/t2gbc2i/frog.png",
+        "original_caption": null,
+        "short_caption": "A frog in a mystical forest filled with oversized mushrooms.",
+        "detail_caption": null,
+        "img_size": null,
+        "mask_inside_threshold": 0.85
+    },
+    {
+        "vertices": [
+            {
+                "vertex_id": "image",
+                "bbox": {
+                    "left": 0.0,
+                    "top": 0.0,
+                    "right": 1.0,
+                    "bottom": 1.0,
+                    "confidence": null
+                },
+                "label": "image",
+                "descs": [
+                    {
+                        "text": "A steampunk-inspired workshop with gears on the walls and a mechanical cat.",
+                        "label": "short",
+                        "full_label": "short-image",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [],
+                "out_edges": [
+                    {
+                        "source": "image",
+                        "text": "mechanical cat",
+                        "target": "mechanical cat"
+                    }
+                ],
+                "sub_masks": [
+                    "mechanical cat",
+                    "mechanical cat_head"
+                ],
+                "super_masks": []
+            },
+            {
+                "vertex_id": "mechanical cat",
+                "bbox": {
+                    "left": 0.185485,
+                    "top": 0.1521648,
+                    "right": 0.5514469,
+                    "bottom": 0.8472928,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "A mechanical cat with intricate gears and cogs visible on its body. The cat has a sleek design with a streamlined head and tail. Its eyes are glowing with a yellowish hue.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "image",
+                        "text": "mechanical cat",
+                        "target": "mechanical cat"
+                    }
+                ],
+                "out_edges": [
+                    {
+                        "source": "mechanical cat",
+                        "text": "head",
+                        "target": "mechanical cat_head"
+                    }
+                ],
+                "sub_masks": [
+                    "mechanical cat_head"
+                ],
+                "super_masks": [
+                    "image"
+                ]
+            },
+            {
+                "vertex_id": "mechanical cat_head",
+                "bbox": {
+                    "left": 0.3859627,
+                    "top": 0.1569396,
+                    "right": 0.5469368,
+                    "bottom": 0.2635259,
+                    "confidence": null
+                },
+                "label": "entity",
+                "descs": [
+                    {
+                        "text": "The image showcases a close-up view of a head, which appears to be that of a mechanical or robotic robot. It has a sleek, metallic finish with a shiny surface that reflects light. The head features two eyes that are glowing with a yellowish hue, giving it a somewhat eerie or futuristic appearance. There are no visible mouth or nose, and no other distinguishable facial features are apparent.",
+                        "label": "short",
+                        "full_label": "short-entity",
+                        "statistics": null,
+                        "clip_scores": {
+                            "scores": null,
+                            "truncation": false
+                        },
+                        "toxicity_scores": null
+                    }
+                ],
+                "in_edges": [
+                    {
+                        "source": "mechanical cat",
+                        "text": "head",
+                        "target": "mechanical cat_head"
+                    }
+                ],
+                "out_edges": [],
+                "sub_masks": [],
+                "super_masks": [
+                    "image",
+                    "mechanical cat"
+                ]
+            }
+        ],
+        "img_url": null,
+        "img_path": "data/images/t2gbc2i/mechanical_cat.png",
+        "original_caption": null,
+        "short_caption": "A steampunk-inspired workshop with gears on the walls and a mechanical cat.",
+        "detail_caption": null,
+        "img_size": null,
+        "mask_inside_threshold": 0.85
+    }
+]

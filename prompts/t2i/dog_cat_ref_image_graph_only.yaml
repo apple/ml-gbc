@@ -1,0 +1,21 @@
+- prompts:
+  - A cat and a dog sitting near a lamppost, depicted in a comic style.
+  - Dog sitting on the ground.
+  - Cat sitting on the ground.
+  bboxes:
+  # Ensure that only first prompt is used in first phase
+  - [0, 0, 1, 1]
+  - [0, 0, 0, 0]
+  - [0, 0, 0, 0]
+  adjacency:
+  - [1, 2]
+  - []
+  - []
+  labeled_adjacency:
+  - [[1, ["dog"]], [2, ["cat"]]]
+  - []
+  - []
+  ref_images:
+  - data/images/wiki/corgi.jpg
+  - data/images/wiki/orange_cat.jpg
+  ref_image_idxs: [1, 2]
