@@ -3,7 +3,7 @@
 The GBC Viewer is an interactive tool for exploring GBC-annotated data. It supports both reading images locally and from the internet. 
 
 <p align="left">
-<img src="../assets/GBC_viewer.png" width=65% height=65% class="center">
+<img src="../assets/GBC_viewer.png" width=65% class="center">
 </p>
 
 

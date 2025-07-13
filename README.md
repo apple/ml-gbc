@@ -6,7 +6,7 @@
 Official repository for the paper **[Graph-Based Captioning: Enhancing Visual Descriptions by Interconnecting Region Captions](https://arxiv.org/abs/2407.06723)**.
 
 <p align="center">
-<img src="assets/GBC_illustration.png" width=70% height=70% class="center">
+<img src="assets/GBC_illustration.png" width=70% class="center">
 </p>
 
 
@@ -167,7 +167,7 @@ python scripts/processing/process_gbc.py \
 We provide a standalone viewer for exploring GBC-annotated data interactively. You can use it with our released datasets or your own data processed through our pipeline. Please see the [viewer](./viewer/) folder for more details.
 
 <p align="center">
-<img src="assets/GBC_viewer.png" width=95% height=95% class="center">
+<img src="assets/GBC_viewer.png" width=95% class="center">
 </p>
 
 ## 🎨 GBC Text-to-Image
@@ -232,7 +232,7 @@ The prompts can be provided in two formats: `.yaml` files (typically user-specif
 We explain below which configuration to use for each of the algorithm shown in the figure. We use the default negative prompt file [prompts/t2i/neg_default.yaml](prompts/t2i/neg_default.yaml).
 
 <p align="center">
-<img src="assets/GBC_sdxl.png" width=90% height=90% class="center">
+<img src="assets/GBC_sdxl.png" width=90% class="center">
 </p>
 
 <details>
